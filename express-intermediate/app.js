@@ -2,11 +2,14 @@ const express = require("express");
 const app = express();
 const PORT = 3000;
 
+app.use(express.static("public"));
+app.set("view engine", "ejs");
+
 app.get("/", (req, res) => res.render("home.ejs"));
 
 app.get("/fallinlovewith/:thing", (req, res) => {
   const thing = req.params.thing;
-  res.render("love.ejs", { thing });
+  res.render("love", { thing });
 });
 
 app.get("/posts", (req, res) => {
@@ -18,7 +21,7 @@ app.get("/posts", (req, res) => {
     { title: "First fifth", author: "Izabela" }
   ];
 
-  res.render("posts.ejs", { posts });
+  res.render("posts", { posts });
 });
 
 app.listen(PORT, () => `App is listening on port ${PORT}`);
