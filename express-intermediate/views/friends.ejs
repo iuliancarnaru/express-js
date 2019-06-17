@@ -1,0 +1,15 @@
+<% include partials/header %>
+<h1> Friends list goes here </h1>
+
+<% friends.map(friend => { %>
+    <li><%= friend %></li>
+<% }) %>
+
+<br />
+
+<form action="/addfriend" method="POST">
+    <input type="text" placeholder="name" name="newfriend">
+    <button type="submit">Add new friend</button>
+</form>
+
+<% include partials/footer %>
