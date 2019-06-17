@@ -1,0 +1,16 @@
+{
+  "name": "express-intermediate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ejs": "^2.6.2",
+    "express": "^4.17.1"
+  }
+}
