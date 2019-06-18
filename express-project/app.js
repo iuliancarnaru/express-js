@@ -3,6 +3,7 @@ const app = express();
 const fetch = require("node-fetch");
 const PORT = 3000;
 
+// EJS template engine
 app.set("view engine", "ejs");
 
 app.get("/", (req, res) => res.render("search"));
