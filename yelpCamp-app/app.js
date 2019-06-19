@@ -26,7 +26,7 @@ app.get("/campgrounds", (req, res) => {
     }
   ];
 
-  res.render("campgrounds");
+  res.render("campgrounds", { campgrounds });
 });
 
 app.listen(PORT, () =>
